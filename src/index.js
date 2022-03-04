@@ -1,8 +1,9 @@
 import React from "react";
 import  ReactDOM  from "react-dom";
 import SeasonDetails from "./SeasonDisplay";
-
+import './index.css';
 import "semantic-ui-css/semantic.min.css";
+import CircularIndeterminate from "./CircularIndeterminate";
 
 class App extends React.Component{
 //  constructor(props){
@@ -28,13 +29,13 @@ state={lat:null,errMessage:''}
 
        
         if(this.state.lat && !this.state.errMessage){
-            return <div><SeasonDetails lat={this.state.lat} /></div>
+            return <div className="whole"><SeasonDetails lat={this.state.lat} /></div>
         }
         
         if(!this.state.lat && this.state.errMessage){
-            return <div>error:{this.state.errMessage}</div>
+            return <div className="whole">error:{this.state.errMessage}</div>
         }
-        return(<div>Loading...</div>)
+        return(<div className="whole"><CircularIndeterminate/></div>)
     }
 }
 
