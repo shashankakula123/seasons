@@ -1,3 +1,4 @@
+import { sizeWidth, style } from "@mui/system";
 import React from "react";
 
 const seasonConfig={
@@ -26,7 +27,7 @@ const {text,iconName}=seasonConfig[season];
     return(
          <div>
 
-             <i className={`${iconName} icon`} />
+             <i className={`${iconName} icon`}  />
 <h2>{text}</h2>
 <i className={`${iconName} icon`} />
     </div>
